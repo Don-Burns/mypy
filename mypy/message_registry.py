@@ -287,6 +287,10 @@ CLASS_PATTERN_UNKNOWN_KEYWORD: Final = 'Class "{}" has no attribute "{}"'
 CLASS_PATTERN_CLASS_OR_STATIC_METHOD: Final = "Cannot have both classmethod and staticmethod"
 MULTIPLE_ASSIGNMENTS_IN_PATTERN: Final = 'Multiple assignments to name "{}" in pattern'
 CANNOT_MODIFY_MATCH_ARGS: Final = 'Cannot assign to "__match_args__"'
+INEXHAUSTIVE_MATCH_STATEMENT: Final = ErrorMessage(
+    "Cases within match statement do not exhaustively handle all values: {}. If not intended to handle all cases, use `case _: pass`",
+    codes.EXHAUSTIVE_MATCH,
+)
 
 DATACLASS_FIELD_ALIAS_MUST_BE_LITERAL: Final = (
     '"alias" argument to dataclass field must be a string literal'
